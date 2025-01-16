@@ -9,7 +9,6 @@ import java.nio.file.Paths;
 
 // Declare here, production dependencies
 
-@JkDep("com.github.lalyos:jfiglet:0.0.9")
 @JkDep("dev.jeka:jeka-core:0.11.16")
 public class App {
 
