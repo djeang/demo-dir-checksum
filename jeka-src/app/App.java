@@ -1,10 +1,8 @@
 package app;
 
-import com.github.lalyos.jfiglet.FigletFont;
 import dev.jeka.core.api.file.JkPathTree;
 import dev.jeka.core.tool.JkDep;
 
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 // Declare here, production dependencies
