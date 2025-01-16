@@ -1,0 +1,34 @@
+name: Test and tag
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow --tag
+
+      - name: Restore JeKa cache
+        uses: actions/cache/restore@v4
+        with:
+          path: ~/.jeka/cache
+          key: ${{ runner.os }}
+
+      - name: Test
+        run: ./jeka test
+
+      - name: Save JeKa cache
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.jeka/cache
+          key: ${{ runner.os }}
+
+      - name: Tag latest
+        run: |
+          TEMP_DIR=$(mktemp -d)
+          echo "Cloning to $TEMP_DIR"
+          git clone . "$TEMP_DIR"
+          echo "::set-output name=temp_dir::$TEMP_DIR"
+          cd $TEMP_DIR
+          ./jeka git: moveLatest
