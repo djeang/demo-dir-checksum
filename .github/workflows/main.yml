@@ -18,12 +18,14 @@ jobs:
       - name: Test
         run: ./jeka test
 
+      - name: Tag latest
+        run: |
+          ./jeka git: moveLatest
+
       - name: Save JeKa cache
         uses: actions/cache/save@v4
         with:
           path: ~/.jeka/cache
           key: demo-dir-checksum
 
-      - name: Tag latest
-        run: |
-          ./jeka git: moveLatest
+
