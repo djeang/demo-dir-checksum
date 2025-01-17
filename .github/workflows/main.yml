@@ -28,7 +28,7 @@ jobs:
         run: |
           TEMP_DIR=$(mktemp -d)
           echo "Cloning to $TEMP_DIR"
-          git clone . "$TEMP_DIR"
-          echo "::set-output name=temp_dir::$TEMP_DIR"
+          GIT_HASH=$(git rev-parse --short "$GITHUB_SHA")
+          git clone . "$TEMP_DIR" --no-checkout
           cd $TEMP_DIR
           ./jeka git: moveLatest
