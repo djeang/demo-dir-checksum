@@ -24,4 +24,9 @@ class AppTest {
         });
     }
 
+    @Test
+    void fail() {
+        throw new RuntimeException("fail");
+    }
+
 }
