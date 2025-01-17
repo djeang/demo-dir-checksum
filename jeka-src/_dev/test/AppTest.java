@@ -1,6 +1,7 @@
 package _dev.test;
 
 import app.App;
+import dev.jeka.core.api.utils.JkUtilsString;
 import dev.jeka.core.tool.JkDep;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -22,11 +23,6 @@ class AppTest {
         Assertions.assertThrows(RuntimeException.class, () -> {
             App.compute(Paths.get("."), "badAlgo");
         });
-    }
-
-    @Test
-    void fail() {
-        throw new RuntimeException("fail");
     }
 
 }

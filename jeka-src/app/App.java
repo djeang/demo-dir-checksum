@@ -28,8 +28,6 @@ public class App implements Runnable {
         System.exit(exitCode);
     }
 
-    dzze
-
     @Override
     public void run() {
         String md5 = compute(Paths.get("."), algo.name().toLowerCase());
