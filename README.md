@@ -4,23 +4,25 @@
 
 Execute tests
 ```shell
-jeka base: test
+jeka test
 ```
 
 Create jar 
 ```shell
-jeka base: pack
+jeka pack
 ```
 
 Run jar
 ```shell
-jeka base: runJar programArgs="" jvmOptions=""
+jeka runJar programArgs="" jvmOptions=""
 ```
+
+### Rin
 
 Run jar 
 This will directly run the built application, without checking if sources have changed since last run
 ```
-jeka -p
+jeka -p arg0 arg1 ...
 ```
 
 ### Docker
