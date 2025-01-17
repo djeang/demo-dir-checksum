@@ -31,4 +31,5 @@ jobs:
           GIT_HASH=$(git rev-parse --short "$GITHUB_SHA")
           git clone . "$TEMP_DIR" --no-checkout
           cd $TEMP_DIR
+          ls -a
           ./jeka git: moveLatest
