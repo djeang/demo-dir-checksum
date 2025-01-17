@@ -42,6 +42,3 @@ Show info about native image:
 ```shell
 jeka docker: infoNative
 ```
-
-
-test
