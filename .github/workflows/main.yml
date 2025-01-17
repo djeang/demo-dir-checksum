@@ -21,7 +21,7 @@ jobs:
       - name: Tag latest
         run: |
           #./jeka git: moveLatest  --verbose
-          git tag push origin --delete latest
+          git push origin --delete latest
           git tag -d latest
           git tag -f latest
           git push origin latest
