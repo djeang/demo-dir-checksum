@@ -20,7 +20,11 @@ jobs:
 
       - name: Tag latest
         run: |
-          ./jeka git: moveLatest  --verbose
+          #./jeka git: moveLatest  --verbose
+          git tag push origin --delete latest
+          git tag -d latest
+          git tag -f latest
+          git push origin latest
 
       - name: Save JeKa cache
         uses: actions/cache/save@v4
