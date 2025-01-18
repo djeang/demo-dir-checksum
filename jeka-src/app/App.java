@@ -1,13 +1,13 @@
 package app;
 
 import dev.jeka.core.api.file.JkPathTree;
+import dev.jeka.core.api.system.JkLog;
 import dev.jeka.core.tool.JkDep;
 import picocli.CommandLine;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-@JkDep("dev.jeka:jeka-core:0.11.16")
 @JkDep("info.picocli:picocli:4.7.6")
 @JkDep("info.picocli:picocli-codegen:4.7.6")
 
@@ -30,8 +30,12 @@ public class App implements Runnable {
 
     @Override
     public void run() {
-        String md5 = compute(Paths.get("."), algo.name().toLowerCase());
-        System.out.println(md5);
+        try {
+            String md5 = compute(Paths.get("."), algo.name().toLowerCase());
+            System.out.println(md5);
+        } catch (RuntimeException e) {
+            System.err.println("Failed to compute checksum: " + e.getMessage());
+        }
     }
 
     public static String compute(Path dir, String algo) {
