@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 
 @JkDep("info.picocli:picocli:4.7.6")
 @JkDep("info.picocli:picocli-codegen:4.7.6")
-
+@JkDep("dev.jeka:jeka-core:0.11.17")
 @CommandLine.Command(name = "checksum",
         subcommands = { CommandLine.HelpCommand.class },
         description = "Compute the checksum of the current dir.")
