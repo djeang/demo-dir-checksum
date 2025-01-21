@@ -14,15 +14,6 @@
         <orderEntry exported="" scope="TEST" type="module-library">
             <library>
                 <CLASSES>
-                    <root url="jar://$JEKA_CACHE_DIR$/repo/dev.jeka/jeka-core/jars/jeka-core-0.11.16.jar!/"/>
-                </CLASSES>
-                <JAVADOC/>
-                <SOURCES/>
-            </library>
-        </orderEntry>
-        <orderEntry exported="" scope="TEST" type="module-library">
-            <library>
-                <CLASSES>
                     <root url="jar://$JEKA_CACHE_DIR$/repo/info.picocli/picocli/jars/picocli-4.7.6.jar!/"/>
                 </CLASSES>
                 <JAVADOC/>
@@ -33,6 +24,15 @@
             <library>
                 <CLASSES>
                     <root url="jar://$JEKA_CACHE_DIR$/repo/info.picocli/picocli-codegen/jars/picocli-codegen-4.7.6.jar!/"/>
+                </CLASSES>
+                <JAVADOC/>
+                <SOURCES/>
+            </library>
+        </orderEntry>
+        <orderEntry exported="" scope="TEST" type="module-library">
+            <library>
+                <CLASSES>
+                    <root url="jar://$JEKA_CACHE_DIR$/repo/dev.jeka/jeka-core/jars/jeka-core-0.11.17.jar!/"/>
                 </CLASSES>
                 <JAVADOC/>
                 <SOURCES/>
