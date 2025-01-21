@@ -1,4 +1,3 @@
-package app.jbang;
 
 public class Toto {
 
