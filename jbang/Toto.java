@@ -1,3 +1,4 @@
+///usr/bin/env jbang "$0" "$@" ; exit $?
 
 public class Toto {
 
