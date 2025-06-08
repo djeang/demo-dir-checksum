@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 @JkDep("dev.jeka:jeka-core:0.11.17")
 @CommandLine.Command(name = "checksum",
         subcommands = { CommandLine.HelpCommand.class },
-        description = "Compute the checksum of the current dir.")
+        description = "Compute the checksum of the current directory.")
 public class App implements Runnable {
 
     public enum Algo {
@@ -35,6 +35,7 @@ public class App implements Runnable {
             System.out.println(md5);
         } catch (RuntimeException e) {
             System.err.println("Failed to compute checksum: " + e.getMessage());
+            System.exit(1);
         }
     }
 
