@@ -13,6 +13,12 @@ You can also install the native version:
 jeka app: install repo=djeang/demo-dir-checksum name=checksum native:
 ```
 
+## Run
+
+```shell
+checksum                                                                                                                                                                                       
+```
+
 ## Help
 ```shell
 checksum help
