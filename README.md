@@ -7,6 +7,12 @@ Performs a checksum on the current directory.
 ```shell
 jeka app: install repo=djeang/demo-dir-checksum name=checksum
 ```
+
+You can also install the native version:
+```shell
+jeka app: install repo=djeang/demo-dir-checksum name=checksum native:
+```
+
 ## Help
 ```shell
 checksum help
