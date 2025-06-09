@@ -1,13 +1,13 @@
 #
 
-Performs a checksum on the current dir.
+Performs a checksum on the current directory.
 
 ## Install
 
 ```shell
 jeka app: install repo=djeang/demo-dir-checksum name=checksum
 ```
-## help
+## Help
 ```shell
 checksum help
 ```
@@ -39,23 +39,5 @@ This will directly run the built application, without checking if sources have c
 jeka -p arg0 arg1 ...
 ```
 
-### Docker
 
-Create image:
-```shell
-jeka docker: build
-```
-Show info about image
-```shell
-jeka docker: info
-```
-
-Create native image:
-```shell
-jeka docker: buildNative
-```
-Show info about native image:
-```shell
-jeka docker: infoNative
-```
 
