@@ -1,6 +1,20 @@
 #
 
-## JeKa commands
+Performs a checksum on the current dir.
+
+## Install
+
+```shell
+jeka app: install repo=djeang/demo-dir-checksum name=checksum
+```
+## help
+```shell
+checksum help
+```
+
+## Developers
+
+### Build commands
 
 Execute tests
 ```shell
@@ -17,7 +31,7 @@ Run jar
 jeka runJar programArgs="" jvmOptions=""
 ```
 
-### Rin
+### Run
 
 Run jar 
 This will directly run the built application, without checking if sources have changed since last run
